@@ -10,9 +10,8 @@ import (
 
 func main() {
 	name := os.Args[1]
-
-	fmt.Println(os.Args[0])
-	fmt.Println(os.Args[1])
+	fmt.Println(os.Args[0]) // Program executed
+	fmt.Println(os.Args[1])	// Additional inputmk
 	str := fmt.Sprint(`
 <!DOCTYPE html>
 <html lang="en">
