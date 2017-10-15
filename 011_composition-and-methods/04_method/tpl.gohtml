@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Composition</title>
+</head>
+<body>
+{{.}}
+<h1>{{.FullName}}</h1>
+<h2>Age: {{.GetAge}}</h2>
+<h2>Secs: {{.GetAge | .GetAgeSecs}}</h2>
+</body>
+</html>
