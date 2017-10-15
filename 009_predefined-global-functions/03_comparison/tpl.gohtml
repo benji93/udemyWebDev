@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functions</title>
+</head>
+<body>
+
+Score 1: {{.Score1}} - Score 2: {{.Score2}}
+
+# Equal to
+{{if eq .Score1 .Score2}}
+Scores are equal
+{{end}}
+
+# Not equal
+{{if ne .Score1 .Score2}}
+Scores are not equal
+{{end}}
+
+</body>
+</html>

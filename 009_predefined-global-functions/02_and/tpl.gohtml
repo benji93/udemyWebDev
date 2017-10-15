@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functions</title>
+</head>
+<body>
+
+# Run the code
+{{.}}
+
+# Example 1 - 
+{{range .}}
+    {{.}}
+{{end}}
+
+# Example 2 - if the data exists
+{{if .}}
+    {{.}}
+{{end}}
+
+# Example 3
+{{range .}}
+    {{if .FName}}
+        {{.}}  
+    {{end}}
+{{end}}
+
+# Example 4
+{{range .}}
+    {{if and .FName .IsAdmin}}
+        First Name: {{.FName}}
+        Last Name: {{.LName}}
+        Is Admin: {{.IsAdmin}}
+    {{end}}
+{{end}}
+
+</body>
+</html>
