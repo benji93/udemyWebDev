@@ -17,7 +17,7 @@ func main() {
 	for {
 		conn, err := li.Accept()
 		if err != nil {
-			log.Fatalln(err)
+			fmt.Println(err)
 			continue
 		}
 		go handle(conn)
@@ -29,8 +29,10 @@ func handle(conn net.Conn) {
 	for scanner.Scan() {
 		ln := scanner.Text()
 		fmt.Println(ln)
+		fmt.Fprintf(conn, "I heard you say: %s\n", ln)
 	}
 	defer conn.Close()
 
-	fmt.Println("Code got here.")
+	// We should never get here
+	fmt.Println("Code got here")
 }
